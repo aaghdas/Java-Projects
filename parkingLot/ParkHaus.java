@@ -1,24 +1,25 @@
 package de.gfn.kursProjekte.parkingLot;
 
-import de.gfn.kursProjekte.parkingLot.ParkHaeser;
-import de.gfn.lessons.parkHaus.Auto;
+
+import java.sql.Array;
 
 public class ParkHaus {
-    private de.gfn.lessons.parkHaus.Auto[] parkHaus;
+
+    private Auto[] parkHaus;
 
     public ParkHaus(int parkHausSize) {
 
         this.parkHaus = new Auto[parkHausSize];
     }
 
-    public de.gfn.lessons.parkHaus.Auto[] getParkHaus() {
+    public Auto[] getParkHaus() {
         return parkHaus;
     }
 
 
     public void parkAuto(String mark, String type, String carNumber, int productionYear, int parkPlaceNumber) {
 
-        de.gfn.lessons.parkHaus.Auto auto = new de.gfn.lessons.parkHaus.Auto(mark, type, carNumber, productionYear);
+        Auto auto = new Auto(mark, type, carNumber, productionYear);
         if (parkPlaceNumber < 1 || parkPlaceNumber > 20) {
             System.out.println("geben Sie einen verfügbaren Parkplaznummer zwische 1 und 20 ein!");
         }else if(parkHaus[parkPlaceNumber-1] !=null){
@@ -52,6 +53,7 @@ public class ParkHaus {
     public  void showParkHaeuser(ParkHaeser parkhaus) {
         System.out.println();
         System.out.printf("Im Parkhaus %s :" ,parkhaus.getParkHausName() );
+
         Auto[] ph = parkhaus.getParkHaeuser().getParkHaus();
         parkhaus.getParkHaeuser().showParkHaus();
     }
