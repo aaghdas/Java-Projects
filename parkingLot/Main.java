@@ -2,7 +2,7 @@ package de.gfn.kursProjekte.parkingLot;
 
 import de.gfn.kursProjekte.parkingLot.ParkHaeser;
 import de.gfn.kursProjekte.parkingLot.ParkHaus;
-import de.gfn.lessons.parkHaus.Auto;
+import de.gfn.kursProjekte.parkingLot.Auto;
 
 public class Main {
 
@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
 
         ParkHaus parkHaus = new ParkHaus(20);
-        de.gfn.lessons.parkHaus.Auto[] ph = parkHaus.getParkHaus();
+        Auto[] ph = parkHaus.getParkHaus();
         System.out.println();
         parkHaus.parkAuto("BMW", "SUV", "L102030", 2023, 1);
         parkHaus.parkAuto("mercedes benz", " ' Limousine' ", " 'H562030' ", 2024, 1);
@@ -31,7 +31,7 @@ public class Main {
         ParkHaeser parkhaus1 = new ParkHaeser("Augustusplatz", 5);
         ParkHaeser parkhaus2 = new ParkHaeser("Marktplatz", 10);
 
-        de.gfn.lessons.parkHaus.Auto[] ph1 = parkhaus1.getParkHaeuser().getParkHaus();
+        Auto[] ph1 = parkhaus1.getParkHaeuser().getParkHaus();
         Auto[] ph2 = parkhaus2.getParkHaeuser().getParkHaus();
 
         parkhaus1.getParkHaeuser().parkAuto("BMW", "SUV", "L102030", 2023, 1);
