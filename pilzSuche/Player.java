@@ -55,8 +55,8 @@ public class Player {
         int restTry = 10;
 
         Board board = new Board();
-        String[][] gameField =  board.koordinateMushrooms(board.getField());
-        board.printBoard(gameField);
+        String[][] gameField =  board.koordinateMushrooms();
+        board.printBoard();
         System.out.println();
         System.out.println("**************************************");
         System.out.println();

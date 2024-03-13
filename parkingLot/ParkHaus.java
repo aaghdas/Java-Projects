@@ -1,8 +1,6 @@
 package de.gfn.kursProjekte.parkingLot;
 
 
-import java.sql.Array;
-
 public class ParkHaus {
 
     private Auto[] parkHaus;
@@ -50,7 +48,7 @@ public class ParkHaus {
         }
 
     }
-    public  void showParkHaeuser(ParkHaeser parkhaus) {
+    public  void showParkHaeuser(ParkHaeuser parkhaus) {
         System.out.println();
         System.out.printf("Im Parkhaus %s :" ,parkhaus.getParkHausName() );
 

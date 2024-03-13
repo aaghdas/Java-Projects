@@ -1,9 +1,5 @@
 package de.gfn.kursProjekte.parkingLot;
 
-import de.gfn.kursProjekte.parkingLot.ParkHaeser;
-import de.gfn.kursProjekte.parkingLot.ParkHaus;
-import de.gfn.kursProjekte.parkingLot.Auto;
-
 public class Main {
 
     static int getSum(int... values) {
@@ -28,8 +24,8 @@ public class Main {
         parkHaus.ausParken(7);
         parkHaus.showParkHaus();
 
-        ParkHaeser parkhaus1 = new ParkHaeser("Augustusplatz", 5);
-        ParkHaeser parkhaus2 = new ParkHaeser("Marktplatz", 10);
+        ParkHaeuser parkhaus1 = new ParkHaeuser("Augustusplatz", 5);
+        ParkHaeuser parkhaus2 = new ParkHaeuser("Marktplatz", 10);
 
         Auto[] ph1 = parkhaus1.getParkHaeuser().getParkHaus();
         Auto[] ph2 = parkhaus2.getParkHaeuser().getParkHaus();
