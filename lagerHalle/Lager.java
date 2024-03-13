@@ -28,16 +28,8 @@ public class Lager {
         return instance;
     }
 
-    public String multiLineReader() throws IOException {
-        //die klasse BufferedReader instanziieren.benötigt java.io.BufferedReader und java.io.IOException. Es muss immer throws IOException haben.
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        // Liest daten durch readLine methode und liefert als zurück
-        return reader.readLine();
-    }
-
-    public void erstellen() throws IOException {
-        Produkt p = new Produkt("", "", 0, 0.0f);
+    public void erstellen()  {
+        Produkt p = new Produkt();
         System.out.println("Geben Sie den Produktnamen ein!");
         try {
             p.setName(this.scanner.next().trim());
@@ -46,15 +38,25 @@ public class Lager {
         }
 
         System.out.println("Geben Sie die Menge ein!");
-        try{
-            p.setMenge(this.scanner.nextInt());
-        }catch (Exception e){
-            System.out.println("Geben Sie eine ganze Zahl ein!");
-        }
+
+        while(true){
+           try{
+               p.setMenge(this.scanner.nextInt());
+               scanner.nextLine(); //next und next int und nextline mischen
+               break ;
+           }catch (Exception e){
+               System.out.println("Geben Sie eine ganze Zahl ein!");
+               scanner.nextLine();
+           }
+
+       }
+
+
 
         System.out.println("Geben Sie eine Beschreibung für das Produkt ein!");
         try {
-            p.setBeschreibung(multiLineReader());
+            p.setBeschreibung(scanner.nextLine());
+
         }catch (Exception e){
             System.out.println("Geben Sie eine Beschreibung für das Produkt ein!");
         }
@@ -65,6 +67,7 @@ public class Lager {
         }catch (Exception e){
             System.out.println("geben Sie ein Zahl ein, z.B. 9,99!");
         }
+        System.out.println(p);
         lager.add(p);
         System.out.println("Sie haben das Produkt erfolgreich hinzugefügt!");
         System.out.println();
@@ -74,6 +77,7 @@ public class Lager {
             System.out.println("****************************");
             float preis = product.getPreis();
             String d = product.getDatum().toString();
+
             System.out.printf("Produk: %s \n Mege: %d Stuck \n Preis: %2f  € \n Beschreibung zum Produkt: %s \n  Aufnahmedatum: %s \n",
                     product.getName(), product.getMenge(), product.getPreis(), product.getBeschreibung(), d);
 

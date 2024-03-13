@@ -60,4 +60,21 @@ public class Produkt {
         this.menge = menge;
         this.preis = preis;
     }
+
+    public Produkt() {
+        datum = LocalDate.now();
+
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Produkt{");
+        sb.append("datum=").append(datum);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", beschreibung='").append(beschreibung).append('\'');
+        sb.append(", menge=").append(menge);
+        sb.append(", preis=").append(preis);
+        sb.append('}');
+        return sb.toString();
+    }
 }
