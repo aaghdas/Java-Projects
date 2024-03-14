@@ -29,14 +29,18 @@ public class GeoFormGroup implements GeoForm {
     @Override
     public void print() {
         for (GeoForm g : geoFormGroup) {
-            g.print(); //die print-Methode aus der klasse, woher das Objekt kommt.wenn objekt instanz der klasse circle is, dann print aus der klasse circle wird aufgerufen usw.
+            //die print-Methode aus der klasse, woher das Objekt kommt.wenn objekt instanz der klasse circle is, dann print aus der klasse circle wird aufgerufen usw.
+
+            g.print();
         }
     }
 
     @Override
     public void moveTo(int x, int y) {
         for (GeoForm g : geoFormGroup) {
-            g.moveTo(x, y); //die moveTo-Methode aus der klasse, woher das Objekt kommt.wenn objekt instanz der klasse circle is, dann print aus der klasse circle wird aufgerufen usw.
+            /* Anders als print Methode, gibt es die moveTo Methode in den Klassen Circle und Rectangle nicht, stattdessen vererben die beiden Klassen diese Methode von ihrer Elternklasse AbstractGeoForm */
+            g.moveTo(x, y);
+
         }
     }
 }
