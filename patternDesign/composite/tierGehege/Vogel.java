@@ -1,4 +1,4 @@
-package de.gfn.kursProjekte.patternDesign.composite.tierGehe;
+package de.gfn.kursProjekte.patternDesign.composite.tierGehege;
 
 public class Vogel implements Sozialisiert {
     @Override

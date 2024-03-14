@@ -1,4 +1,4 @@
-package de.gfn.kursProjekte.patternDesign.composite.tierGehe;
+package de.gfn.kursProjekte.patternDesign.composite.tierGehege;
 
 import java.util.ArrayList;
 import java.util.List;
