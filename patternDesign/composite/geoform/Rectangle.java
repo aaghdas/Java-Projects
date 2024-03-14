@@ -1,12 +1,12 @@
 package de.gfn.kursProjekte.patternDesign.composite.geoform;
 
-public class Rect extends AbstractGeoForm {
+public class Rectangle extends AbstractGeoForm {
 
     private int height;
 
     private int width;
 
-    public Rect(int x, int y, int height, int width) {
+    public Rectangle(int x, int y, int height, int width) {
         super(x, y);
         this.height = height;
         this.width = width;
@@ -30,6 +30,6 @@ public class Rect extends AbstractGeoForm {
 
     @Override
     public void print() {
-        System.out.printf("Rect: x %d, y %d, witdth %d, height %d \n", getX(), getY(), width, height);
+        System.out.printf("Rectangle: x %d, y %d, witdth %d, height %d \n", getX(), getY(), width, height);
     }
 }

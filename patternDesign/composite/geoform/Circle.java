@@ -5,9 +5,10 @@ public class Circle extends AbstractGeoForm {
     private int radius;
 
     public Circle(int x, int y, int radius) {
-        super(x, y);
+        super(x, y); //Konstruktor der Elternklasse(AbstraktGeoForm)
         this.radius = radius;
     }
+
 
     @Override
     public void print() {
