@@ -1,6 +1,6 @@
 package de.gfn.lessons.loopExamples;
 
-public class Break {
+public class Lessons {
 
         public static void main(String[] args) {
 
