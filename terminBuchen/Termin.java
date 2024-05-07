@@ -1,5 +1,6 @@
 package de.gfn.kursProjekte.terminBuchen;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Termin implements Comparable<Termin>{
@@ -16,6 +17,7 @@ public class Termin implements Comparable<Termin>{
         this.beschreibung = beschreibung;
     }
 
+
     public Date getDatum() {
         return datum;
     }
@@ -23,12 +25,16 @@ public class Termin implements Comparable<Termin>{
 
     @Override
     public int compareTo(Termin o) {
+
         return this.datum.compareTo(o.getDatum());
     }
 
     @Override
     public String toString() {
-        return "Datum: " + datum + ", Zeit: " + zeit + ", Titel: " + titel + ", Beschreibung: " + beschreibung;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        String dateFormatStr = dateFormat.format(datum);
+
+        return "Datum: " + dateFormatStr + ", Zeit: " + zeit + ", Titel: " + titel + ", Beschreibung: " + beschreibung;
     }
 
 

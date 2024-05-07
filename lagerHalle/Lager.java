@@ -42,8 +42,8 @@ public class Lager {
         while(true){
            try{
                p.setMenge(this.scanner.nextInt());
-               scanner.nextLine(); //next und next int und nextline mischen
-               break ;
+               scanner.nextLine();
+               break ;  //try block hat break aber catch wird wiederholt, kein break
            }catch (Exception e){
                System.out.println("Geben Sie eine ganze Zahl ein!");
                scanner.nextLine();

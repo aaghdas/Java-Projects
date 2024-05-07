@@ -8,7 +8,7 @@ public class AlleTermine {
 
     private static AlleTermine instance;
     private List<Termin> termine;
-    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
     private AlleTermine(){
         termine = new ArrayList<>();
@@ -55,16 +55,20 @@ public class AlleTermine {
     }
 
         public void ZeigBestimmteTermine (String terminEingabe){
-
-
-            for (Termin t : termine) {
-                String dateStr = dateFormat.format(t.getDatum()); // Date-Objekt in String umwandeln
-                if (dateStr.equals(terminEingabe)) {
-                    System.out.println(t);
+            try {
+                for (Termin t : termine) {
+                    String dateStr = dateFormat.format(t.getDatum()); // Date-Objekt in String umwandeln
+                    if (dateStr.equals(terminEingabe)) {
+                        System.out.println(t);
+                    }
                 }
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
-    }
+}
+
 
 
 
